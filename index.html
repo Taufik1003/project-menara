@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IoT Control Panel</title>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
+
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>IoT Control Panel</h1>
+        
+        <!-- Sensor Data Cards -->
+        <div class="sensor-container">
+            <div class="sensor-card temperature">
+                <div class="sensor-icon">
+                    <i class="fas fa-temperature-high"></i>
+                </div>
+                <div class="sensor-data">
+                    <h3>Temperature</h3>
+                    <p id="temperature-value">-- °C</p>
+                </div>
+            </div>
+            
+            <div class="sensor-card humidity">
+                <div class="sensor-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="sensor-data">
+                    <h3>Humidity</h3>
+                    <p id="humidity-value">-- %</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chart Container -->
+        <div class="chart-container">
+            <canvas id="sensorChart"></canvas>
+        </div>
+        
+        <div class="wrapper">
+            <div class="progress">
+                <a class="icon1">
+                    <i class="fas fa-4x fa-bath"></i>
+                </a>
+                <div class="toggle-btn" id="unact">
+                    <div class="inner-circle"></div>
+                </div>
+                <div class="toggle-btn active" id="act">
+                    <div class="inner-circle"></div>
+                </div>
+            </div>
+
+            <div class="progress">
+                <a class="icon1">
+                    <i class="fas fa-4x fa-utensils"></i>
+                </a>
+                <div class="toggle-btn1" id="unact1">
+                    <div class="inner-circle"></div>
+                </div>
+                <div class="toggle-btn1 active" id="act1">
+                    <div class="inner-circle"></div>
+                </div>
+            </div>
+            
+            <div class="progress">
+                <a class="icon1">
+                    <i class="fas fa-4x fa-tv"></i>
+                </a>
+                <div class="toggle-btn2" id="unact2">
+                    <div class="inner-circle"></div>
+                </div>
+                <div class="toggle-btn2 active" id="act2">
+                    <div class="inner-circle"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
